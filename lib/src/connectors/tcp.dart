@@ -95,8 +95,8 @@ class TcpPrinterConnector implements PrinterConnector<TcpPrinterInput> {
     try {
       // final _socket = await Socket.connect(_host, _port, timeout: _timeout);
       _socket?.add(Uint8List.fromList(bytes));
-      // await _socket?.flush();
-      // _socket?.destroy();
+      await _socket?.flush();
+      _socket?.destroy();
       return true;
     } catch (e) {
       return false;
@@ -121,8 +121,6 @@ class TcpPrinterConnector implements PrinterConnector<TcpPrinterInput> {
     if (delayMs != null) {
       await Future.delayed(Duration(milliseconds: delayMs), () => null);
     }
-    await _socket?.flush();
-      _socket?.destroy();
     return true;
   }
 }
