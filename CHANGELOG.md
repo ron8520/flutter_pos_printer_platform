@@ -1,3 +1,15 @@
+## 1.0.12
+
+* Resolve minor bug [Android] 12
+
+## 1.0.11
+
+* Resolve minor bug dependecies
+
+## 1.0.10
+
+* Now android supports targetSdkVersion 31
+
 ## 1.0.9
 
 * Resolve minor bug [Android] connection
