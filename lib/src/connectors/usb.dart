@@ -127,6 +127,7 @@ class UsbPrinterConnector implements PrinterConnector<UsbPrinterInput> {
           name: r['product'],
           vendorId: r['vendorId'],
           productId: r['productId'],
+          deviceId: r['deviceId'],
           // name: r['name'],
         );
       }
