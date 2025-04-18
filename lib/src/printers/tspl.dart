@@ -220,6 +220,7 @@ class TsplPrinter<T> extends GenericPrinter<T> {
     final int widthBytes = widthPx ~/ 8; // one byte is 8 bits
     final List<int> imageBytes = image.getBytes(order: ChannelOrder.argb);
 
+
     List<int> monoPixel = [];
     for (int i = 0; i < imageBytes.length; i += 4) {
       bool shouldBeWhite = imageBytes[i + 3] == 0 || (imageBytes[i] > 100 && imageBytes[i + 1] > 100 && imageBytes[i + 2] > 100);
